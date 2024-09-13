@@ -11,9 +11,8 @@
   <!-- Include Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Include the sound file -->
-  <!-- Update this path to match the location of your audio file in the GitHub repo -->
-  <audio id="bot-sound" src="assets/notification-sound.mp3" preload="auto"></audio> <!-- Example path -->
+  <!-- Audio tag to play the sound -->
+  <audio id="bot-sound" src="notification-sound.mp3" preload="auto"></audio>
 
   <style>
     body {
@@ -88,12 +87,15 @@
     // Function to play sound
     function playSound() {
       const audio = document.getElementById('bot-sound');
-      audio.play();
+      audio.play().catch(function(error) {
+        console.error('Error playing sound:', error);
+      });
     }
 
-    // Listen to Botpress webchat events
+    // Listen for Botpress Webchat events
     window.botpressWebChat.onEvent(function(event) {
       if (event.type === 'message') {
+        console.log('Bot sent a message!');  // For debugging
         playSound();  // Play sound when a message is received
       }
     });
