@@ -11,6 +11,9 @@
   <!-- Include Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Include FontAwesome for Instagram Icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     body {
       background-color: #f5f7fa;
@@ -64,6 +67,22 @@
       margin-bottom: 20px;
     }
 
+    /* Instagram icon styling */
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00;
+    }
+
   </style>
 </head>
 <body>
@@ -73,6 +92,13 @@
     <div class="tech-icon">🚀</div>
     <h1>Your AI Travel Companion</h1>
     <p>Click the chat icon below to start interacting with our beta bot.</p>
+
+    <!-- Instagram Icon Linked to TravelSavvy Instagram Page -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/travelsavvy.ai/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </div>
 
   <!-- Botpress Webchat Scripts -->
