@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TravelSavvy - Your AI Travel Companion</title>
 
-  <!-- Include Google Fonts for Modern Style -->
+  <!-- Include Google Fonts for a Modern Look -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Include Bootstrap CSS for Layout -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Styling for Landing Page -->
+  <!-- Styling for a modern, clean, mobile-friendly landing page -->
   <style>
     body, html {
       margin: 0;
@@ -21,79 +21,54 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      background: #000;
-      color: white;
+      background-color: #f5f7fa;
+      color: #333;
     }
 
-    /* Moving Background Animation */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-image: url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px);
-      z-index: -1;
-      animation: moveBackground 20s infinite alternate;
-    }
-
-    /* Background Animation Keyframes */
-    @keyframes moveBackground {
-      0% {
-        transform: scale(1) translateX(0);
-      }
-      100% {
-        transform: scale(1.05) translateX(-10px);
-      }
-    }
-
+    /* Full-width container with modern design */
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: white;
       padding: 40px;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      max-width: 600px;
-      color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      margin: auto;
     }
 
     .badge {
       display: inline-block;
       font-size: 1rem;
-      background-color: #ffcc00;
-      color: #000;
+      background-color: #007bff;
+      color: #fff;
       padding: 10px 20px;
       border-radius: 50px;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 600;
+      color: #007bff;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #f1f1f1;
-      margin-bottom: 40px;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     .tech-icon {
-      font-size: 4rem;
-      color: #ffcc00;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      color: #007bff;
+      margin-bottom: 15px;
     }
 
-    /* Make the site responsive for mobile */
+    /* Responsive adjustments for smaller screens */
     @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
@@ -102,11 +77,16 @@
       p {
         font-size: 1rem;
       }
+
+      .tech-icon {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Main content container -->
   <div class="container">
     <span class="badge">Beta Version of TravelSavvy</span>
     <div class="tech-icon">✈️</div>
