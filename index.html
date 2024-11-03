@@ -11,7 +11,7 @@
   <!-- Include Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Correct FontAwesome CDN for Icons -->
+  <!-- Include FontAwesome for Instagram Icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
@@ -92,19 +92,33 @@
     <span class="badge">Beta Version of TravelSavvy</span>
     <div class="tech-icon">🚀</div>
     <h1>Your AI Travel Companion</h1>
-    <p>Click the chat icon below to start interacting with our beta bot.</p>
+    <p>Our bot is ready to assist you with your travel needs. The chat will open automatically.</p>
 
     <!-- Instagram Icon Linked to TravelSavvy Instagram Page -->
     <div class="social-icons">
       <a href="https://www.instagram.com/travelsavvy.ai/" target="_blank">
-        <i class="fab fa-instagram"></i> <!-- Corrected FontAwesome Instagram icon -->
+        <i class="fab fa-instagram"></i>
       </a>
     </div>
   </div>
 
   <!-- Botpress Webchat Scripts -->
   <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
-  <script src="https://mediafiles.botpress.cloud/e27b2b80-b0ec-45da-a4a2-c89b0e0a5293/webchat/v2.1/config.js"></script>
+
+  <!-- Configuration for Full-Page Chatbot Experience -->
+  <script>
+    window.botpressWebChat.init({
+      host: 'https://mediafiles.botpress.cloud/e27b2b80-b0ec-45da-a4a2-c89b0e0a5293',
+      botId: 'e27b2b80-b0ec-45da-a4a2-c89b0e0a5293',
+      hideWidget: true,  // Hides the floating widget icon
+      enableReset: true,
+    });
+
+    // Automatically opens the chatbot in full-page mode
+    window.addEventListener("load", function() {
+      window.botpressWebChat.open();
+    });
+  </script>
 
 </body>
 </html>
