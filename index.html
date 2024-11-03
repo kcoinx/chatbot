@@ -13,6 +13,7 @@
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
+      background-color: #1f1f1f; /* Charcoal background */
     }
 
     #chatbot-container {
@@ -39,7 +40,7 @@
       fullScreen: true    // Enables full-screen mode
     });
 
-    // Open the chatbot immediately in full-screen mode
+    // Open the chatbot immediately in full-screen mode in the container
     window.addEventListener("load", function() {
       window.botpressWebChat.open({
         fullscreen: true,
